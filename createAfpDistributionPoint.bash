@@ -292,11 +292,11 @@ sshpass -p ${sshMasterPass} scp ~/.ssh/id_rsa.pub ${masterUser}@${masterServer}:
 
 mkdir -p /var/lib/casperDpSync
 
-cat >/var/lib/casperDpSync/casperDpSync.bash <<'EOT'
+cat >/var/lib/casperDpSync/casperDpSync.bash <<EOF
 #/bin/bash
 # put the rest of the script here
 # use this script's variables to create the casperDpSync.bash script
-EOT
+EOF
 
 chmod a+x /var/lib/casperDpSync/casperDpSync.bash
 

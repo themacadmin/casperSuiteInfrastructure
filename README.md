@@ -3,13 +3,18 @@ Create a Casper Suite distribution point on ubuntu 14.04.3
 
 ## Tested Sections
 
-### Redirect output to log file
+* Redirect output to log file
+* Install netatalk 3.1.6
+* Create and configure shared directory, accounts, and permissions
+* Share $sharePath
+* Create Distribution Point in JSS
 
-### Install netatalk 3.1.6
+## Untested Sections
 
-### Create and configure shared directory, accounts, and permissions
+* create ssh key
+* replicate from master
+* write chron job to replicate from master at 23:00 local time daily
 
-### Share $sharePath
+## Unimplemented Sections
 
-### Create Distribution Point in JSS
-
+* write local script to replicate from master

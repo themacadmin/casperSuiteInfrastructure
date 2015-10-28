@@ -102,6 +102,8 @@ sharePort=548
 # Master distribution point info
 masterUser="adminuser"
 masterServer="master.server.corp"
+masterPath="/CasperShare"
+syncLogFile="/var/log/casperDpSync.log"
 
 ##########################################################################################
 #
@@ -282,10 +284,20 @@ sshpass -p ${sshMasterPass} scp ~/.ssh/id_rsa.pub ${masterUser}@${masterServer}:
 ##########################################################################################
 #
 # write local script to replicate from master Distribution Point begins
+# *** NOT FINISHED ***
+# *** NOT TESTED ***
 #
 ##########################################################################################
 
-# to be implemented
+mkdir -p /var/lib/casperDpSync
+
+cat >/var/lib/casperDpSync/casperDpSync.bash <<'EOT'
+#/bin/bash
+# put the rest of the script here
+# use this script's variables to create the casperDpSync.bash script
+EOT
+
+chmod a+x /var/lib/casperDpSync/casperDpSync.bash
 
 ##########################################################################################
 #
@@ -295,11 +307,18 @@ sshpass -p ${sshMasterPass} scp ~/.ssh/id_rsa.pub ${masterUser}@${masterServer}:
 
 ##########################################################################################
 #
-# write chron job to replicate from master at 23:00 local time begins
+# write chron job to replicate from master at 23:00 local time daily begins
+# *** NOT TESTED ***
 #
 ##########################################################################################
 
-# to be implemented
+# dump crontab to newCron
+crontab -l > newCron
+# echo replication job into newCron
+echo "0 23 * * * /var/lib/casperDpSync/casperDpSync.bash" >> newCron
+# install newCron
+crontab newCron
+rm newCron
 
 ##########################################################################################
 #

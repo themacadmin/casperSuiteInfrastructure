@@ -101,6 +101,7 @@ sharePort=548
 
 # Master distribution point info
 masterUser="adminuser"
+masterPass="admin1234"
 masterServer="master.server.corp"
 masterPath="/CasperShare"
 syncLogFile="/var/log/casperDpSync.log"

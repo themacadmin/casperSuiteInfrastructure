@@ -11,6 +11,8 @@ A LaunchDaemon to run dpSync.bash
 
 I name this com.company.dpSync.plist and place it in /Library/LaunchDaemons/
 
+Got a Linux DP? Run dpSync.bash via cron.
+
 ## createLinuxAfpDp
 Create a Casper Suite distribution point on ubuntu 14.04.3
 

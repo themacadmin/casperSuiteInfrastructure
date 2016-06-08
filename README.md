@@ -28,7 +28,7 @@ Create a Casper Suite distribution point on ubuntu 14.04.3
 
 * create ssh key
 * replicate from master
-* write chron job to replicate from master at 23:00 local time daily
+* write cron job to replicate from master at 23:00 local time daily
 
 ### Unimplemented Sections
 

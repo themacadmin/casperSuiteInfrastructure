@@ -1,7 +1,15 @@
 # Casper Suite Infrastructure
 These are scripts of other items that help keep Casper Suite infrastructure running to my specifications and preferences.
 
-##
+## dpSync.bash
+Syncs a non-master distribution point from the master distribution point.
+
+Tested on OS X v10.7-10.11 and ubuntu 14.04.3
+
+### dpSyncLaunchDaemon.plist
+A LaunchDaemon to run dpSync.bash
+
+I typically name this com.company.dpSync.
 
 ## createLinuxAfpDp
 Create a Casper Suite distribution point on ubuntu 14.04.3

@@ -1,0 +1,1 @@
+select application_name,application_path from $databaseName.applications into outfile '/tmp/applicationReport.csv' fields terminated by ',' lines terminated by '\n';

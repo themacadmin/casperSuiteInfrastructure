@@ -1,0 +1,1 @@
+SELECT computer_name FROM databaseName.`computers_denormalized` INTO OUTFILE '/tmp/computerReport.csv' FIELDS TERMINATED by ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
